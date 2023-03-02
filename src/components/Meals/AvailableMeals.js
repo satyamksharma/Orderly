@@ -23,7 +23,7 @@ const DUMMY_MEALS = [
         id: "m4",
         name: "Garlic Naan",
         description: "Classic Indian bread with garlic butter and herbs",
-        price: 18.99,
+        price: 66.0,
     },
 ];
 
