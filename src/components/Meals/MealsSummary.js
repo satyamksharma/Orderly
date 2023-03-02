@@ -6,12 +6,13 @@ const MealsSummary = () => {
         <section className={classes.summary}>
             <h2>Delicious Food, Delivered To You</h2>
             <p>
-                Choose your favorite meal from our broad selection of available meals and enjoy a
-                delicious lunch or dinner at home.
+                Enjoy a mouth-watering meal in the comfort of your own home with our extensive
+                selection of delicious dishes available for delivery.
             </p>
             <p>
-                All our meals are cooked with high-quality ingredients, just-in-time and of course
-                by experienced chefs!
+                Our skilled chefs use only the finest, fresh ingredients and prepare each meal to
+                order, ensuring that your food arrives just as it should be - hot, fresh, and
+                bursting with flavor!
             </p>
         </section>
     );
