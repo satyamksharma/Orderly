@@ -11,9 +11,13 @@ const Cart = (props) => {
 
     const hasItems = cartCtx.items.length;
 
-    const cartItemRemoveHandler = (id) => {};
+    const cartItemRemoveHandler = (id) => {
+        cartCtx.removeItem(id);
+    };
 
-    const cartItemAddHandler = (item) => {};
+    const cartItemAddHandler = (item) => {
+        cartCtx.addItem({ ...item, amount: 1 });
+    };
 
     const cartItems = (
         <ul className={classes["cart-items"]}>
@@ -34,7 +38,7 @@ const Cart = (props) => {
             {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
-                <span>{totalAmount}</span>
+                <span>₹ {totalAmount}</span>
             </div>
             <div className={classes.actions}>
                 <button
@@ -43,7 +47,16 @@ const Cart = (props) => {
                 >
                     Close
                 </button>
-                {hasItems > 0 && <button className={classes.btn}>Order</button>}
+                {hasItems > 0 && (
+                    <button
+                        className={classes.btn}
+                        onClick={() => {
+                            alert("Order Successful!");
+                        }}
+                    >
+                        Order
+                    </button>
+                )}
             </div>
         </Modal>
     );
